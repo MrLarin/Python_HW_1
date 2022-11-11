@@ -1,3 +1,5 @@
+# Знакомство с Python
+
 # Задача. На вход программе подаются два целых числа aa и bb. Напишите программу, которая выводит:
 
 # сумму чисел aa и bb;
@@ -54,12 +56,12 @@
 
 # Второй способ (Я его не понял и у меня не работает)
 
-S1 = input('Enter: ')
-S2 = input('Enter: ')
-Start = 0
-End = len(S1)
-count = 0
-while S1.Find(S2, Start, End) != -1:
-    Start = S1.Find(S2, Start, End) + len(S2)
-    count += 1
-print(count)
+# S1 = input('Enter: ')
+# S2 = input('Enter: ')
+# Start = 0
+# End = len(S1)
+# count = 0
+# while S1.Find(S2, Start, End) != -1:
+#     Start = S1.Find(S2, Start, End) + len(S2)
+#     count += 1
+# print(count)
