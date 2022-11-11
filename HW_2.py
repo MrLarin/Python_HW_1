@@ -5,12 +5,13 @@
 
 # правильное решение. В этом случае работает с числами 0,56
 
-# num = input()
-# summ = 0
-# for i in num:
-#     if i.isdigit():
-#         summ += int(i)
-# print(summ)
+import random
+num = input()
+summ = 0
+for i in num:
+    if i.isdigit():
+        summ += int(i)
+print(summ)
 
 # Первый способ
 
@@ -39,7 +40,7 @@
 # и выдает набор произведений чисел от 1 до N.
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
-# Мой способ
+# Первый вариант решения
 
 # n = int(input('Введите число: '))
 # ran = range(1, n+1)
@@ -51,26 +52,25 @@
 #     a += 1
 # print(num)
 
-# Приняли в таком виде
+# Более эффективный вариант решения
 
-# n = int(input())
-# for num in range(1, n+1):
-#     prod = 1
-#     for n in range(1, num+1):
-#         prod *= n
-#     print(prod)
+n = int(input())
+for num in range(1, n+1):
+    prod = 1
+    for n in range(1, num+1):
+        prod *= n
+    print(prod)
 
-# Задайте список из n чисел последовательности $(1+\frac 1 n)^n$ и выведите на экран их сумму.
+# Задайте список из n чисел последовательности (3*(х+1)+1) и выведите на экран их сумму.
 # - Для n = 6: {1: 4, 2: 7, 3: 10, 4: 13, 5: 16, 6: 19}
 
 
-# n = int(input('Enter num: '))
-# dict = {х+1: 3*(х+1)+1 for х in list(range(n))}
-# print(dict)
+n = int(input('Enter num: '))
+dict = {х+1: 3*(х+1)+1 for х in list(range(n))}
+print(dict)
 
 # Задайте список из N элементов, заполненных числами из промежутка [-N, N].
 # Найдите произведение элементов на указанных позициях.
-# Позиции хранятся в файле file.txt в одной строке одно число.
 
 # N = int(input('Введите число: '))
 # a = range(-N, N+1)
@@ -82,11 +82,10 @@
 
 # Реализуйте алгоритм перемешивания списка.
 
-# import random
-# Week = ['Понедельник', 'Вторник', 'Среда', 'Четверг',
-#         'Пятница', 'Суббота', 'Воскресенье']
-# random.shuffle(Week)
-# print(Week)
+Week = ['Понедельник', 'Вторник', 'Среда', 'Четверг',
+        'Пятница', 'Суббота', 'Воскресенье']
+random.shuffle(Week)
+print(Week)
 
 
 # Произведение элементов
@@ -97,13 +96,13 @@
 # Во второй строке целые числа через пробел, указанные позиции.
 # Одно число, произведение элементов на указанных позициях.
 
-# n = int(input())
-# num = list(range(-n, n+1))
-# nums = [int(i) for i in input().split()]
-# prod = 1
-# for i in nums:
-#     prod *= num[i]
-# print(prod)
+n = int(input())
+num = list(range(-n, n+1))
+nums = [int(i) for i in input().split()]
+prod = 1
+for i in nums:
+    prod *= num[i]
+print(prod)
 
 
 # Считайте элементы и сформируйте из него список.
@@ -112,16 +111,16 @@
 # и каждый четный элемент поменять местами с предыдущим,
 # каждый нечетный со следующим, если такое возможно.
 
-# n = (i for i in input().split())
-# num = [int(i) for i in n]
-# temp = 0
-# for i in range(len(num)):
-#     if num[i] % 2 == 0 and i >= 1:
-#         temp = num[i]
-#         num[i] = num[i-1]
-#         num[i-1] = temp
-#     elif num[i] % 2 != 0 and i < len(num)-1:
-#         temp = num[i]
-#         num[i] = num[i+1]
-#         num[i+1] = temp
-# print(*num, sep=" ", end="")
+n = (i for i in input().split())
+num = [int(i) for i in n]
+temp = 0
+for i in range(len(num)):
+    if num[i] % 2 == 0 and i >= 1:
+        temp = num[i]
+        num[i] = num[i-1]
+        num[i-1] = temp
+    elif num[i] % 2 != 0 and i < len(num)-1:
+        temp = num[i]
+        num[i] = num[i+1]
+        num[i+1] = temp
+print(*num, sep=" ", end="")
