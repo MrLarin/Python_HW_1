@@ -123,4 +123,4 @@ for i in range(len(num)):
         temp = num[i]
         num[i] = num[i+1]
         num[i+1] = temp
-print(*num, sep=" ", end="")
+print(*num, sep=" ", end="")  # Вывести массив без скобочек и запятых
