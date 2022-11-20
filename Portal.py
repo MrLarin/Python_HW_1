@@ -13,3 +13,12 @@ list = []
 for i in range(1, 10):
     list.append(fib(i))
 print(list)
+
+функция удаления букв в строке
+
+
+def deleteName(str, delStr):
+    with open('file_2.txt', 'w') as data:
+        data.write(str.replace(f'{delStr}', ''))
+        data.close
+    return (str.replace(f'{delStr}', ''))
