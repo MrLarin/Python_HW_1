@@ -21,6 +21,8 @@
 #         data.close
 #     return (str.replace(f'{delStr}', ''))
 
+#                      ДОПОЛНИТЕЛЬНЫЙ СЕМИНАР №1
+
 # Квадрат числа
 
 #  функция
@@ -128,8 +130,19 @@
 
 # на вход число! Прверить кратно ли оно 5 и (10 или 15),но не 30
 
-n = int(input())
-if (n % 5 == 0 and (n % 10 == 0 or n % 15 == 0)) and n % 30 != 0:
-    print('Кратное')
-else:
-    print('Не Кратное')
+# n = int(input())
+# if (n % 5 == 0 and (n % 10 == 0 or n % 15 == 0)) and n % 30 != 0:
+#     print('Кратное')
+# else:
+#     print('Не Кратное')
+
+# * в функции Print
+# my_list = [213, 'sdf', True, 34.23]
+# print(my_list)
+# print(*my_list)
+# print('\nНовый принт')
+# print()
+# print(*my_list, sep='\n', end='\n')  # sep - разделитель, end - что в конце
+
+
+#                      ДОПОЛНИТЕЛЬНЫЙ СЕМИНАР №2

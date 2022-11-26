@@ -68,3 +68,13 @@ for i in range(n-1):
     negafib.append(thend)
     negafib.insert(0, thstart)
 print(*negafib)
+
+
+# [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
+num = 8
+my_list = [1, 0, 1]
+for _ in range(1, num):
+    print(my_list[0], my_list[1] - my_list[0])
+    print(my_list[-1], my_list[-2] + my_list[-1])
+    my_list.append(my_list[-2] + my_list[-1])
+    my_list.insert(0, my_list[1] - my_list[0])
